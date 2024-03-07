@@ -27,22 +27,22 @@ Custom CSS
     display: flex; /* Use Flexbox */
     flex-direction: column; /* Stack children vertically */
     justify-content: space-between; /* Space between items */
-    height: auto; /* Ensure the container takes full height of its parent */
+    height: 100%; /* Ensure the container takes full height of its parent */
 }
 
-.grid a {
+.grid figure {
     flex: 1; /* Each link element should flexibly fill the space */
     display: flex; /* Use Flexbox inside the link as well */
 }
 
-.grid img {
+.grid figure > img {
     width: 100%; /* Ensure images take the full width of the link */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area without losing aspect ratio */
 }
 
 /* Ensure there's a gap between the images if desired */
-.grid a:not(:last-child) {
+.grid figure:not(:last-child) {
     margin-bottom: 20px; /* Adjust as needed */
 }
 
@@ -61,6 +61,14 @@ Custom CSS
     padding-bottom: 6px;
 }
 
+.card a.link:hover{
+    border-color: #ffffff;
+}
+
+.card figure{
+    border-bottom: 4px solid #cf1430;
+}
+
 .text-grey{
     color: #a3a4a4;
 }
@@ -72,9 +80,153 @@ Custom CSS
 
 @media (min-width: 576px) {
     .vh-sm-100 {
-        height: 100vh; } }
+        height: 100vh;
+    }
+}
 
 @media (min-width: 768px) {
     .vh-md-100 {
-        height: 100vh; } }
+        height: 100vh;
+    }
+}
+
+@media (max-width: 991px) {
+    #hero-header .grid{
+        height: auto;
+    }
+}
+
+/* Common style */
+.grid-container figure {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0;
+}
+
+.grid-container figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid-container figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid-container figure figcaption::before,
+.grid-container figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid-container figure figcaption,
+.grid-container figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid-container figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid-container figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid-container figure h2 span {
+    font-weight: 800;
+}
+
+.grid-container figure h2,
+.grid-container figure p {
+    margin: 0;
+}
+
+.grid-container figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+/*hover effects animations*/
+
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+
+figure.effect-apollo {
+    background: #0e1414;
+}
+
+figure.effect-apollo img {
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 3em;
+    padding: 0 1em;
+    border-right: 4px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-apollo h2 {
+    text-align: left;
+}
+
+figure.effect-apollo:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
 
