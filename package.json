@@ -1,0 +1,25 @@
+{
+  "name": "orchard-fed-test",
+  "version": "1.0.0",
+  "description": "Orchard FED Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jaronavales@bitbucket.org/jaronavales/orchard-fed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/jaronavales/orchard-fed/issues"
+  },
+  "homepage": "https://bitbucket.org/jaronavales/orchard-fed#readme",
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  }
+}
