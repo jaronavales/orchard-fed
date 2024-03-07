@@ -1,71 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Webpack</title>
-  </head>
-  <body>
-    <div class="container py-4 px-3 mx-auto">
-      <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
-        <h1 class="h4">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bootstrap-fill d-inline-block me-2" viewBox="0 0 16 16">
-              <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
-              <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
-            </svg>
-            <span>Webpack</span>
-          </a>
-        </h1>
-        <a href="https://github.com/twbs/examples/tree/main/webpack/" target="_blank" rel="noopener">View on GitHub</a>
-      </header>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Orchard FED Test</title>
+  <meta name="description"
+        content="Orchard frontend testing landing page"/>
 
-      <h1>Build Bootstrap with Webpack</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-4">You've successfully loaded the Bootstrap + Webpack example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Webpack to compile and bundle our Sass and JavaScript. It also includes Autoprefixer.</p>
-        <p>If this button appears blue and the link appears purple, you've done it!</p>
+</head>
+<body>
+
+<!--hero header-->
+<section id="hero-header" class="mt-8 mb-8">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 col-sm-10 col-12 pr-2">
+        <a href="#">
+          <img src="./images/component-01/Image-01.jpg" alt="...">
+        </a>
       </div>
 
-      <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
-
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="col-md-4 col-sm-10 col-12 grid">
+        <a href="#">
+          <img src="./images/component-01/Image-02.jpg" alt="...">
+        </a>
+        <a href="#">
+          <img src="./images/component-01/Image-03.jpg" alt="...">
+        </a>
       </div>
 
-      <hr class="col-1 my-5 mx-0">
+      <div class="col-md-4 col-sm-10 col-12 pl-2">
+        <h3 class="heading-black">ANSWER YOUR BODY'S NEEDS</h3>
+        <hr class="divider" />
+        <p class="py-3 text-grey">
+          The way ingredients are sources effects the way we nourish believes our body naturally develops
+          an appetite for the foods and nutrients it needs to be healty, but that artificial flavourings are getting
+          in the way. This can be reversed by focusing on high-quality ingredients and being mindful as your appetite
+          guides you to consume according to your body's needs.
+        </p>
+        <h6 class="heading-red font-weight-medium">BE MINDFUL</h6>
+        <h6 class="font-weight-medium">Sourcing local or organic food is a good way to start being more mindful about what you're cooking and eating.</h6>
+      </div>
 
-      <h2>Guides</h2>
-      <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-      <ul class="icon-list">
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap quick start guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Bootstrap Vite guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/contribute/">Contributing to Bootstrap</a></li>
-      </ul>
-
-      <hr class="mt-5 mb-4">
-
-      <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
     </div>
-  </body>
+  </div>
+</section>
+
+<!--news section-->
+<section id="blog" class="mb-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
+        <h2>ALL THE LATEST FROM AEG</h2>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-4 pr-2">
+        <div class="card">
+          <a href="#">
+            <img class="card-img-top img-raised" src="./images/component-02/Image-01.jpg" alt="Blog 1">
+          </a>
+          <div class="card-body pl-0 pr-0">
+            <a href="#" class="card-title mb-2">
+              <h6 class="font-weight-medium">Summer Lunch Menu By Mark Best</h6>
+            </a>
+            <p class="card-text text-grey">
+              AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.
+            </p>
+            <a href="#" class="link">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <a href="#">
+            <img class="card-img-top img-raised" src="./images/component-02/Image-02.jpg" alt="Blog 2">
+          </a>
+          <div class="card-body pl-0 pr-0">
+            <a href="#" class="card-title mb-2">
+              <h6 class="font-weight-medium">A Traditional Christmas Eve, Mark Best Style</h6>
+            </a>
+            <p class="card-text text-grey">
+              One of Australia's best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.
+            </p>
+            <a href="#" class="link">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 pl-2">
+        <div class="card">
+          <a href="#">
+            <img class="card-img-top img-raised" src="./images/component-02/Image-03.jpg" alt="Blog 3">
+          </a>
+          <div class="card-body pl-0 pr-0">
+            <a href="#" class="card-title mb-2">
+              <h6 class="font-weight-medium">Taking Taste Further</h6>
+            </a>
+            <p class="card-text text-grey">
+              This exclusive cookbook gives you all the know-how you need. We’ve designed it to make sure you get the most out of our products – and the best out of your food.
+            </p>
+            <a href="#" class="link">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
 </html>

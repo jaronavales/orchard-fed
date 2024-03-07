@@ -3,21 +3,38 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
   entry: './src/js/main.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "js/[name].js"
   },
-  devServer:{
-    static: path.resolve(__dirname, 'dist'),
-    port: 8080,
-    hot: true
+  // Configure the "webpack-dev-server" plugin
+  devServer: {
+    watchFiles: [
+      path.resolve('src/**/*')
+    ],
+    compress: true,
+    port: process.env.PORT || 8080,
+    hot: true,
+  },
+
+  // Performance configuration
+  performance: {
+    hints: false
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "src/images",
+          to: "images",
+        }
+      ]
+    })
   ],
   module: {
     rules: [

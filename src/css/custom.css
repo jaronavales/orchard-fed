@@ -1,0 +1,80 @@
+﻿/*****************
+Custom CSS
+*****************/
+
+.small-xl {
+    font-size: 90%;
+}
+
+.img-faded {
+    opacity: .5;
+}
+
+.font-weight-medium {
+    font-weight: 600;
+}
+
+.heading-red{
+    color: #cf1430;
+}
+
+/*Home*/
+#hero-header img{
+    width: 100%;
+}
+
+.grid {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space between items */
+    height: auto; /* Ensure the container takes full height of its parent */
+}
+
+.grid a {
+    flex: 1; /* Each link element should flexibly fill the space */
+    display: flex; /* Use Flexbox inside the link as well */
+}
+
+.grid img {
+    width: 100%; /* Ensure images take the full width of the link */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without losing aspect ratio */
+}
+
+/* Ensure there's a gap between the images if desired */
+.grid a:not(:last-child) {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.divider{
+    color: #ffffff;
+}
+
+.card{
+    background: #0e1414;
+}
+
+.card a.link{
+    color: #ffffff;
+    font-weight: 500;
+    border-bottom: 1px solid #cf1430;
+    padding-bottom: 6px;
+}
+
+.text-grey{
+    color: #a3a4a4;
+}
+
+/*vertical heights */
+.vh-100 {
+    height: 100vh;
+}
+
+@media (min-width: 576px) {
+    .vh-sm-100 {
+        height: 100vh; } }
+
+@media (min-width: 768px) {
+    .vh-md-100 {
+        height: 100vh; } }
+
