@@ -78,6 +78,10 @@ Custom CSS
     height: 100vh;
 }
 
+.mobile-view{
+    display: none;
+}
+
 @media (min-width: 576px) {
     .vh-sm-100 {
         height: 100vh;
@@ -87,6 +91,16 @@ Custom CSS
 @media (min-width: 768px) {
     .vh-md-100 {
         height: 100vh;
+    }
+}
+
+@media (max-width: 575px) {
+    .mobile-view{
+        display: block;
+    }
+
+    .desktop-view{
+        display: none;
     }
 }
 
@@ -162,6 +176,24 @@ Custom CSS
 .grid-container figure p {
     letter-spacing: 1px;
     font-size: 68.5%;
+}
+
+.mobile-view .carousel-inner {
+    height: 0;
+    padding-bottom: 50%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.mobile-view  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.mobile-view  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
 }
 
 /*hover effects animations*/
