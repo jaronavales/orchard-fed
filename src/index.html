@@ -19,8 +19,8 @@
 
       <div class="col-lg-4 col-sm-6 col-12 pr-lg-2 pr-md-2 mb-lg-0 mb-mb-md-0 mb-4 desktop-view">
         <div class="grid-container">
-          <figure class="effect-apollo">
-            <img src="./images/component-01/Image-01.jpg" alt="...">
+          <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+            <img src="./images/component-01/Image-01.jpg" alt="..." class="item-image">
             <figcaption>
               <p>Nurturing Growth: The Journey to Natural Well-being</p>
               <a href="#">View more</a>
@@ -31,15 +31,15 @@
 
       <div class="col-lg-4 col-sm-6 col-12 desktop-view">
         <div class="grid-container grid">
-          <figure class="effect-apollo">
-            <img src="./images/component-01/Image-02.jpg" alt="...">
+          <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+            <img src="./images/component-01/Image-02.jpg" alt="..." class="item-image">
             <figcaption>
               <p>Nature's Palette: The Essence of Wholesome Nutrition</p>
               <a href="#">View more</a>
             </figcaption>
           </figure>
-          <figure class="effect-apollo">
-            <img src="./images/component-01/Image-03.jpg" alt="...">
+          <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+            <img src="./images/component-01/Image-03.jpg" alt="..." class="item-image">
             <figcaption>
               <p>Pure Harvest: The Spearheads of Organic Choice</p>
               <a href="#">View more</a>
@@ -106,12 +106,12 @@
     <div class="row mt-4">
       <div class="col-md-4 mb-5 mb-lg-0">
         <div class="card">
-          <div class="grid-container">
-            <figure class="effect-apollo">
-              <img class="card-img-top img-raised" src="./images/component-02/Image-01.jpg" alt="Blog 1">
+          <a href="javascript:(0);" class="grid-container">
+            <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+              <img class="card-img-top img-raised item-image" src="./images/component-02/Image-01.jpg" alt="Blog 1">
               <figcaption></figcaption>
             </figure>
-          </div>
+          </a>
           <div class="card-body pl-0 pr-0">
             <a href="#" class="card-title mb-2">
               <h6 class="font-weight-medium">Summer Lunch Menu By Mark Best</h6>
@@ -125,12 +125,12 @@
       </div>
       <div class="col-md-4 mb-5 mb-lg-0">
         <div class="card">
-          <div class="grid-container">
-            <figure class="effect-apollo">
-              <img class="card-img-top img-raised" src="./images/component-02/Image-02.jpg" alt="Blog 2">
+          <a href="javascript:(0);" class="grid-container">
+            <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+              <img class="card-img-top img-raised item-image" src="./images/component-02/Image-02.jpg" alt="Blog 2">
               <figcaption></figcaption>
             </figure>
-          </div>
+          </a>
           <div class="card-body pl-0 pr-0">
             <a href="#" class="card-title mb-2">
               <h6 class="font-weight-medium">A Traditional Christmas Eve, Mark Best Style</h6>
@@ -144,12 +144,12 @@
       </div>
       <div class="col-md-4 mb-5 mb-lg-0">
         <div class="card">
-          <div class="grid-container">
-            <figure class="effect-apollo">
-              <img class="card-img-top img-raised" src="./images/component-02/Image-03.jpg" alt="Blog 3">
+          <a href="javascript:(0);" class="grid-container">
+            <figure class="effect-apollo item" data-toggle="modal" data-target="#exampleModal">
+              <img class="card-img-top img-raised item-image" src="./images/component-02/Image-03.jpg" alt="Blog 3">
               <figcaption></figcaption>
             </figure>
-          </div>
+          </a>
           <div class="card-body pl-0 pr-0">
             <a href="#" class="card-title mb-2">
               <h6 class="font-weight-medium">Taking Taste Further</h6>
@@ -164,6 +164,22 @@
     </div>
   </div>
 </section>
+
+<!-- modal section -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="./images/component-01/Image-01.jpg" alt="..." class="img-fluid" id="modal-image">
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
